@@ -352,7 +352,7 @@ class Authorize
      */
     private function getOrCreateService($class, $options)
     {
-        if ($this->serviceLocator->has($class)) {
+        if (!$this->serviceLocator->has($class)) {
             return $this->serviceLocator->get($class);
         }
 
